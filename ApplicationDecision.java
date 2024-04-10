@@ -30,12 +30,12 @@ public class ApplicationDecision {
 	//Criteria for the decision on the Application Models
 	//0. Availability/Robustness/Functional Safety
 	//1. Latency
-	//2. Performance of the available platform 
-	//3. Security Requirements
+	//2. Processing Performance
+	//3. Security
 	//4. Energy Consumption of Vehicle
-	//5. Resource Demand on Vehicle Hardware for Execution
+	//5. Necessary On-Board Hardware
 	//6. Operation Expenses
-	//7. Capital Expenses
+	//7. Capital Expenditures
 	
 	
 	public static final int NrOfSWCRequirements= 6;
@@ -70,7 +70,7 @@ public class ApplicationDecision {
         //Combined Parameters
         double combinedPerformanceRequirements = 0.0;
         double combinedOperationExpenseParameters = 0.0;
-        double combinedCapitalExpenseParameters = 0.0;
+        double combinedCapitalExpenditureParameters = 0.0;
         
         //Go over every application model and evaluate each of its criteria!
         for(int applicationModel=0; applicationModel<NrOfApplicationModels; applicationModel++) {
@@ -123,9 +123,9 @@ public class ApplicationDecision {
             		part_result_max[applicationModel][criteria] = criteria_6_evaluation(0.0, applicationModel); //same evaluation with "0.0" for every value
         			break;
         			
-        		case 7: //Capital Expenses
-        			combinedCapitalExpenseParameters = (swcData.getSwc_criteria()[2] + swcData.getSwc_criteria()[4])/2;
-        			part_result[applicationModel][criteria] = criteria_7_evaluation(combinedCapitalExpenseParameters, applicationModel);
+        		case 7: //Capital Expenditures
+        			combinedCapitalExpenditureParameters = (swcData.getSwc_criteria()[2] + swcData.getSwc_criteria()[4])/2;
+        			part_result[applicationModel][criteria] = criteria_7_evaluation(combinedCapitalExpenditureParameters, applicationModel);
             		part_result_max[applicationModel][criteria] = criteria_7_evaluation(0.0, applicationModel); //same evaluation with "0.0" for every value
         			break;
         		}
@@ -316,7 +316,7 @@ public class ApplicationDecision {
     //-----------------------------------------------------------------------------------------------------------------------------------------------------
   
    
-  //2. Resource Restrictions
+  //2. Processing Performance
     public static double criteria_2_evaluation(double swc_criteria, int applicationModel) {
     	double result = 0.0;
     	
@@ -444,7 +444,7 @@ public class ApplicationDecision {
     //-----------------------------------------------------------------------------------------------------------------------------------------------------
     
 
-  	//4. Requirements on Vehicle Hardware for function execution
+  	//4. Necessary on-board hardware
     public static double criteria_4_evaluation(double swc_criteria, int applicationModel) {
     	double result = 0.0;
     	
@@ -626,7 +626,7 @@ public class ApplicationDecision {
 
     	return result;
     }
-  //7. Capital Expenses
+  //7. Capital Expenditures
     public static double criteria_7_evaluation(double swc_criteria, int applicationModel) {
     	double result = 0.0;
     	

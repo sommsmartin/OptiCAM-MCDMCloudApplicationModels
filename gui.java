@@ -26,12 +26,12 @@ public class gui implements FocusListener {
 	private JFrame frmApplicationSuitabilityTester;
 	private JLabel lblMemoryRequirements, lblSlider_memory, lblSlider_data_dependencies, lblSlider_availability, lblSlider_latency, lblSlider_performance, lblSlider_security; 
 	private JLabel lblVehicle_Only_Value, lblElastic_Value, lblDuplicate_Value, lblParallel_Value, lblFallback_Value, lblCloudEdgeOnly_Value;
-	private JLabel lblSlider_security_importance, lblSlider_availability_importance, lblSlider_latency_importance, lblSlider_resource_restriction_importance,
-					lblSlider_vehicle_energy_consumption_importance, lblSlider_capital_expenses_importance, lblSlider_operation_expenses_importance,
-					lblSlider_resource_demand_importance;
+	private JLabel lblSlider_security_importance, lblSlider_availability_importance, lblSlider_latency_importance, lblSlider_processing_performance_importance,
+					lblSlider_vehicle_energy_consumption_importance, lblSlider_capital_expenditures_importance, lblSlider_operation_expenses_importance,
+					lblSlider_hardware_demand_importance;
 	private JSlider slider_memory, slider_latency, slider_performance, slider_security, slider_data_dependencies, slider_availability;
-	private JSlider slider_availability_importance, slider_security_importance, slider_capital_expenses_importance, slider_operation_expenses_importance, 
-					slider_resource_restriction_importance, slider_vehicle_resource_demand_importance, slider_vehicle_energy_consumption_importance, 
+	private JSlider slider_availability_importance, slider_security_importance, slider_capital_expenditures_importance, slider_operation_expenses_importance, 
+					slider_processing_performance_importance, slider_vehicle_hardware_demand_importance, slider_vehicle_energy_consumption_importance, 
 					slider_latency_importance;
 	private JCheckBox chckbxWeightedHarmonicMean;
 	
@@ -440,11 +440,11 @@ public class gui implements FocusListener {
 		lblLatencyImportance.setBounds(480, 125, 210, 26);
 		frmApplicationSuitabilityTester.getContentPane().add(lblLatencyImportance);
 		
-		JLabel lblResourceRestrictionImportance = new JLabel("Resource Restriction Imp.");
-		lblResourceRestrictionImportance.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblResourceRestrictionImportance.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblResourceRestrictionImportance.setBounds(480, 160, 210, 26);
-		frmApplicationSuitabilityTester.getContentPane().add(lblResourceRestrictionImportance);
+		JLabel lblProcessingPerformanceImportance = new JLabel("Processing Performance Imp.");
+		lblProcessingPerformanceImportance.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblProcessingPerformanceImportance.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblProcessingPerformanceImportance.setBounds(480, 160, 210, 26);
+		frmApplicationSuitabilityTester.getContentPane().add(lblProcessingPerformanceImportance);
 		
 		JLabel lblVehicleEnergyConsumptionImportance = new JLabel("Vehicle Energy Consumption Imp.");
 		lblVehicleEnergyConsumptionImportance.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -452,17 +452,17 @@ public class gui implements FocusListener {
 		lblVehicleEnergyConsumptionImportance.setBounds(480, 195, 210, 26);
 		frmApplicationSuitabilityTester.getContentPane().add(lblVehicleEnergyConsumptionImportance);
 		
-		JLabel lblSecurityImportance_1 = new JLabel("Security Importance");
-		lblSecurityImportance_1.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblSecurityImportance_1.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblSecurityImportance_1.setBounds(480, 265, 210, 26);
-		frmApplicationSuitabilityTester.getContentPane().add(lblSecurityImportance_1);
+		JLabel lblSecurityImportance = new JLabel("Security Importance");
+		lblSecurityImportance.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblSecurityImportance.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblSecurityImportance.setBounds(480, 265, 210, 26);
+		frmApplicationSuitabilityTester.getContentPane().add(lblSecurityImportance);
 		
-		JLabel lblVehicleResourceDemand = new JLabel("Vehicle Resource Demand Imp.");
-		lblVehicleResourceDemand.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblVehicleResourceDemand.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblVehicleResourceDemand.setBounds(480, 230, 210, 26);
-		frmApplicationSuitabilityTester.getContentPane().add(lblVehicleResourceDemand);
+		JLabel lblVehicleHardwareDemand = new JLabel("Vehicle Hardware Demand Imp.");
+		lblVehicleHardwareDemand.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblVehicleHardwareDemand.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblVehicleHardwareDemand.setBounds(480, 230, 210, 26);
+		frmApplicationSuitabilityTester.getContentPane().add(lblVehicleHardwareDemand);
 		
 		JLabel lblOperationExpensesImportance = new JLabel("Operation Expenses Importance");
 		lblOperationExpensesImportance.setHorizontalAlignment(SwingConstants.RIGHT);
@@ -470,11 +470,11 @@ public class gui implements FocusListener {
 		lblOperationExpensesImportance.setBounds(480, 300, 210, 26);
 		frmApplicationSuitabilityTester.getContentPane().add(lblOperationExpensesImportance);
 		
-		JLabel lblCapitalExpensesImportance = new JLabel("Capital Expenses Importance");
-		lblCapitalExpensesImportance.setHorizontalAlignment(SwingConstants.RIGHT);
-		lblCapitalExpensesImportance.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblCapitalExpensesImportance.setBounds(480, 335, 210, 26);
-		frmApplicationSuitabilityTester.getContentPane().add(lblCapitalExpensesImportance);
+		JLabel lblCapitalExpendituresImportance = new JLabel("Capital Expenditures Importance");
+		lblCapitalExpendituresImportance.setHorizontalAlignment(SwingConstants.RIGHT);
+		lblCapitalExpendituresImportance.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblCapitalExpendituresImportance.setBounds(480, 335, 210, 26);
+		frmApplicationSuitabilityTester.getContentPane().add(lblCapitalExpendituresImportance);
 		
 		lblSlider_availability_importance = new JLabel("0.125");
 		lblSlider_availability_importance.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -486,15 +486,15 @@ public class gui implements FocusListener {
 		lblSlider_latency_importance.setBounds(900, 125, 33, 26);
 		frmApplicationSuitabilityTester.getContentPane().add(lblSlider_latency_importance);
 		
-		lblSlider_resource_restriction_importance = new JLabel("0.125");
-		lblSlider_resource_restriction_importance.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblSlider_resource_restriction_importance.setBounds(900, 160, 33, 26);
-		frmApplicationSuitabilityTester.getContentPane().add(lblSlider_resource_restriction_importance);
+		lblSlider_processing_performance_importance = new JLabel("0.125");
+		lblSlider_processing_performance_importance.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblSlider_processing_performance_importance.setBounds(900, 160, 33, 26);
+		frmApplicationSuitabilityTester.getContentPane().add(lblSlider_processing_performance_importance);
 		
-		lblSlider_resource_demand_importance = new JLabel("0.125");
-		lblSlider_resource_demand_importance.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblSlider_resource_demand_importance.setBounds(900, 230, 33, 26);
-		frmApplicationSuitabilityTester.getContentPane().add(lblSlider_resource_demand_importance);
+		lblSlider_hardware_demand_importance = new JLabel("0.125");
+		lblSlider_hardware_demand_importance.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblSlider_hardware_demand_importance.setBounds(900, 230, 33, 26);
+		frmApplicationSuitabilityTester.getContentPane().add(lblSlider_hardware_demand_importance);
 		
 		lblSlider_security_importance = new JLabel("0.125");
 		lblSlider_security_importance.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -506,10 +506,10 @@ public class gui implements FocusListener {
 		lblSlider_operation_expenses_importance.setBounds(900, 300, 33, 26);
 		frmApplicationSuitabilityTester.getContentPane().add(lblSlider_operation_expenses_importance);
 		
-		lblSlider_capital_expenses_importance = new JLabel("0.125");
-		lblSlider_capital_expenses_importance.setFont(new Font("Tahoma", Font.PLAIN, 13));
-		lblSlider_capital_expenses_importance.setBounds(900, 335, 33, 26);
-		frmApplicationSuitabilityTester.getContentPane().add(lblSlider_capital_expenses_importance);
+		lblSlider_capital_expenditures_importance = new JLabel("0.125");
+		lblSlider_capital_expenditures_importance.setFont(new Font("Tahoma", Font.PLAIN, 13));
+		lblSlider_capital_expenditures_importance.setBounds(900, 335, 33, 26);
+		frmApplicationSuitabilityTester.getContentPane().add(lblSlider_capital_expenditures_importance);
 		
 		lblSlider_vehicle_energy_consumption_importance = new JLabel("0.125");
 		lblSlider_vehicle_energy_consumption_importance.setFont(new Font("Tahoma", Font.PLAIN, 13));
@@ -541,17 +541,17 @@ public class gui implements FocusListener {
 		slider_latency_importance.setBounds(690, 125, 200, 26);
 		frmApplicationSuitabilityTester.getContentPane().add(slider_latency_importance);
 		
-		slider_resource_restriction_importance = new JSlider();
-		slider_resource_restriction_importance.addChangeListener(new ChangeListener() {
+		slider_processing_performance_importance = new JSlider();
+		slider_processing_performance_importance.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
-				lblSlider_resource_restriction_importance.setText(Double.toString((Double.valueOf(slider_resource_restriction_importance.getValue())/1000)));
+				lblSlider_processing_performance_importance.setText(Double.toString((Double.valueOf(slider_processing_performance_importance.getValue())/1000)));
 			}
 		});
 		
-		slider_resource_restriction_importance.setMaximum(1000);
-		slider_resource_restriction_importance.setValue(125);
-		slider_resource_restriction_importance.setBounds(690, 160, 200, 26);
-		frmApplicationSuitabilityTester.getContentPane().add(slider_resource_restriction_importance);
+		slider_processing_performance_importance.setMaximum(1000);
+		slider_processing_performance_importance.setValue(125);
+		slider_processing_performance_importance.setBounds(690, 160, 200, 26);
+		frmApplicationSuitabilityTester.getContentPane().add(slider_processing_performance_importance);
 		
 		slider_vehicle_energy_consumption_importance = new JSlider();
 		slider_vehicle_energy_consumption_importance.addChangeListener(new ChangeListener() {
@@ -565,16 +565,16 @@ public class gui implements FocusListener {
 		slider_vehicle_energy_consumption_importance.setBounds(690, 195, 200, 26);
 		frmApplicationSuitabilityTester.getContentPane().add(slider_vehicle_energy_consumption_importance);
 		
-		slider_vehicle_resource_demand_importance = new JSlider();
-		slider_vehicle_resource_demand_importance.addChangeListener(new ChangeListener() {
+		slider_vehicle_hardware_demand_importance = new JSlider();
+		slider_vehicle_hardware_demand_importance.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
-				lblSlider_resource_demand_importance.setText(Double.toString((Double.valueOf(slider_vehicle_resource_demand_importance.getValue())/1000)));
+				lblSlider_hardware_demand_importance.setText(Double.toString((Double.valueOf(slider_vehicle_hardware_demand_importance.getValue())/1000)));
 			}
 		});
-		slider_vehicle_resource_demand_importance.setMaximum(1000);
-		slider_vehicle_resource_demand_importance.setValue(125);
-		slider_vehicle_resource_demand_importance.setBounds(690, 230, 200, 26);
-		frmApplicationSuitabilityTester.getContentPane().add(slider_vehicle_resource_demand_importance);
+		slider_vehicle_hardware_demand_importance.setMaximum(1000);
+		slider_vehicle_hardware_demand_importance.setValue(125);
+		slider_vehicle_hardware_demand_importance.setBounds(690, 230, 200, 26);
+		frmApplicationSuitabilityTester.getContentPane().add(slider_vehicle_hardware_demand_importance);
 		
 		slider_security_importance = new JSlider();
 		slider_security_importance.addChangeListener(new ChangeListener() {
@@ -587,17 +587,17 @@ public class gui implements FocusListener {
 		slider_security_importance.setBounds(690, 265, 200, 26);
 		frmApplicationSuitabilityTester.getContentPane().add(slider_security_importance);
 
-		slider_capital_expenses_importance = new JSlider();
-		slider_capital_expenses_importance.addChangeListener(new ChangeListener() {
+		slider_capital_expenditures_importance = new JSlider();
+		slider_capital_expenditures_importance.addChangeListener(new ChangeListener() {
 			public void stateChanged(ChangeEvent e) {
-				lblSlider_capital_expenses_importance.setText(Double.toString((Double.valueOf(slider_capital_expenses_importance.getValue())/1000)));
+				lblSlider_capital_expenditures_importance.setText(Double.toString((Double.valueOf(slider_capital_expenditures_importance.getValue())/1000)));
 			}
 		});
 		
-		slider_capital_expenses_importance.setMaximum(1000);
-		slider_capital_expenses_importance.setValue(125);
-		slider_capital_expenses_importance.setBounds(690, 335, 200, 26);
-		frmApplicationSuitabilityTester.getContentPane().add(slider_capital_expenses_importance);
+		slider_capital_expenditures_importance.setMaximum(1000);
+		slider_capital_expenditures_importance.setValue(125);
+		slider_capital_expenditures_importance.setBounds(690, 335, 200, 26);
+		frmApplicationSuitabilityTester.getContentPane().add(slider_capital_expenditures_importance);
 		
 		slider_operation_expenses_importance = new JSlider();
 		slider_operation_expenses_importance.addChangeListener(new ChangeListener() {
@@ -617,12 +617,12 @@ public class gui implements FocusListener {
 				removeAllChangeListeners();
 				slider_availability_importance.setValue(125);
 				slider_latency_importance.setValue(125);
-				slider_resource_restriction_importance.setValue(125);
+				slider_processing_performance_importance.setValue(125);
 				slider_vehicle_energy_consumption_importance.setValue(125);
-				slider_vehicle_resource_demand_importance.setValue(125);
+				slider_vehicle_hardware_demand_importance.setValue(125);
 				slider_security_importance.setValue(125);
 				slider_operation_expenses_importance.setValue(125);
-				slider_capital_expenses_importance.setValue(125);
+				slider_capital_expenditures_importance.setValue(125);
 				//set the importance factors to the data classes right away!;
 				setImportanceFactorsGuiValuesToDataClasses();
 				setSuitabilityToGui();
@@ -659,7 +659,7 @@ public class gui implements FocusListener {
 
 	//temporarily  all change listeners
 	private void removeAllChangeListeners() {
-		slider_capital_expenses_importance.removeChangeListener(sliderChangeListener);
+		slider_capital_expenditures_importance.removeChangeListener(sliderChangeListener);
 		slider_memory.removeChangeListener(sliderChangeListener);
 		slider_latency.removeChangeListener(sliderChangeListener);
 		slider_performance.removeChangeListener(sliderChangeListener);
@@ -669,16 +669,16 @@ public class gui implements FocusListener {
 		slider_latency_importance.removeChangeListener(sliderChangeListener);
 		slider_availability_importance.removeChangeListener(sliderChangeListener);
 		slider_security_importance.removeChangeListener(sliderChangeListener);
-		slider_capital_expenses_importance.removeChangeListener(sliderChangeListener);
+		slider_capital_expenditures_importance.removeChangeListener(sliderChangeListener);
 		slider_operation_expenses_importance.removeChangeListener(sliderChangeListener);
-		slider_resource_restriction_importance.removeChangeListener(sliderChangeListener);
-		slider_vehicle_resource_demand_importance.removeChangeListener(sliderChangeListener);
+		slider_processing_performance_importance.removeChangeListener(sliderChangeListener);
+		slider_vehicle_hardware_demand_importance.removeChangeListener(sliderChangeListener);
 		slider_vehicle_energy_consumption_importance.removeChangeListener(sliderChangeListener);
 	}
 
 	//adds all change listeners again
 	private void setAllChangeListeners() {
-		slider_capital_expenses_importance.addChangeListener(sliderChangeListener);
+		slider_capital_expenditures_importance.addChangeListener(sliderChangeListener);
 		slider_memory.addChangeListener(sliderChangeListener);
 		slider_latency.addChangeListener(sliderChangeListener);
 		slider_performance.addChangeListener(sliderChangeListener);
@@ -688,10 +688,10 @@ public class gui implements FocusListener {
 		slider_latency_importance.addChangeListener(sliderChangeListener);
 		slider_availability_importance.addChangeListener(sliderChangeListener);
 		slider_security_importance.addChangeListener(sliderChangeListener);
-		slider_capital_expenses_importance.addChangeListener(sliderChangeListener);
+		slider_capital_expenditures_importance.addChangeListener(sliderChangeListener);
 		slider_operation_expenses_importance.addChangeListener(sliderChangeListener);
-		slider_resource_restriction_importance.addChangeListener(sliderChangeListener);
-		slider_vehicle_resource_demand_importance.addChangeListener(sliderChangeListener);
+		slider_processing_performance_importance.addChangeListener(sliderChangeListener);
+		slider_vehicle_hardware_demand_importance.addChangeListener(sliderChangeListener);
 		slider_vehicle_energy_consumption_importance.addChangeListener(sliderChangeListener);	
 	}
 
@@ -715,24 +715,24 @@ public class gui implements FocusListener {
 		else if(applicationModelData.getImportance_factor()[1] != ((double) slider_latency_importance.getValue())/1000) {
 			i=1;
 			rest = 1 - ((double) slider_latency_importance.getValue())/1000;}
-		else if(applicationModelData.getImportance_factor()[2] != ((double) slider_resource_restriction_importance.getValue())/1000) {
+		else if(applicationModelData.getImportance_factor()[2] != ((double) slider_processing_performance_importance.getValue())/1000) {
 			i=2;
-			rest = 1 - ((double) slider_resource_restriction_importance.getValue())/1000;}
+			rest = 1 - ((double) slider_processing_performance_importance.getValue())/1000;}
 		else if(applicationModelData.getImportance_factor()[3] != ((double) slider_vehicle_energy_consumption_importance.getValue())/1000) {
 			i=3;
 			rest = 1 - ((double) slider_vehicle_energy_consumption_importance.getValue())/1000;}
-		else if(applicationModelData.getImportance_factor()[4] != ((double) slider_vehicle_resource_demand_importance.getValue())/1000) {
+		else if(applicationModelData.getImportance_factor()[4] != ((double) slider_vehicle_hardware_demand_importance.getValue())/1000) {
 			i=4;
-			rest = 1 - ((double) slider_vehicle_resource_demand_importance.getValue())/1000;}
+			rest = 1 - ((double) slider_vehicle_hardware_demand_importance.getValue())/1000;}
 		else if(applicationModelData.getImportance_factor()[5] != ((double) slider_security_importance.getValue())/1000) {
 			i=5;
 			rest = 1 - ((double) slider_security_importance.getValue())/1000;}
 		else if(applicationModelData.getImportance_factor()[6] != ((double) slider_operation_expenses_importance.getValue())/1000) {
 			i=6;
 			rest = 1 - ((double) slider_operation_expenses_importance.getValue())/1000;}
-		else if(applicationModelData.getImportance_factor()[7] != ((double) slider_capital_expenses_importance.getValue())/1000) {
+		else if(applicationModelData.getImportance_factor()[7] != ((double) slider_capital_expenditures_importance.getValue())/1000) {
 			i=7;
-			rest = 1 - ((double) slider_capital_expenses_importance.getValue())/1000;}
+			rest = 1 - ((double) slider_capital_expenditures_importance.getValue())/1000;}
 		
 		if(i!=-1) {
 			//some change is there --> adjust the values!
@@ -754,16 +754,16 @@ public class gui implements FocusListener {
 						rest = rest - ((double) slider_latency_importance.getValue())/1000;
 						break;
 					case 2:
-						slider_resource_restriction_importance.setValue((int) (slider_resource_restriction_importance.getValue() * scale));
-						rest = rest - ((double) slider_resource_restriction_importance.getValue())/1000;
+						slider_processing_performance_importance.setValue((int) (slider_processing_performance_importance.getValue() * scale));
+						rest = rest - ((double) slider_processing_performance_importance.getValue())/1000;
 						break;
 					case 3:
 						slider_vehicle_energy_consumption_importance.setValue((int) (slider_vehicle_energy_consumption_importance.getValue() * scale));
 						rest = rest - ((double) slider_vehicle_energy_consumption_importance.getValue())/1000;
 						break;
 					case 4:
-						slider_vehicle_resource_demand_importance.setValue((int) (slider_vehicle_resource_demand_importance.getValue() * scale));
-						rest = rest - ((double) slider_vehicle_resource_demand_importance.getValue())/1000;
+						slider_vehicle_hardware_demand_importance.setValue((int) (slider_vehicle_hardware_demand_importance.getValue() * scale));
+						rest = rest - ((double) slider_vehicle_hardware_demand_importance.getValue())/1000;
 						break;
 					case 5:
 						slider_security_importance.setValue((int) (slider_security_importance.getValue() * scale));
@@ -774,8 +774,8 @@ public class gui implements FocusListener {
 						rest = rest - ((double) slider_operation_expenses_importance.getValue())/1000;
 						break;
 					case 7:
-						slider_capital_expenses_importance.setValue((int) (slider_capital_expenses_importance.getValue() * scale));
-						rest = rest - ((double) slider_capital_expenses_importance.getValue())/1000;
+						slider_capital_expenditures_importance.setValue((int) (slider_capital_expenditures_importance.getValue() * scale));
+						rest = rest - ((double) slider_capital_expenditures_importance.getValue())/1000;
 						break;
 					}
 				}
@@ -796,13 +796,13 @@ public class gui implements FocusListener {
 						slider_latency_importance.setValue(slider_latency_importance.getValue()+newValue);
 						break;
 					case 2:
-						slider_resource_restriction_importance.setValue(slider_resource_restriction_importance.getValue()+newValue);
+						slider_processing_performance_importance.setValue(slider_processing_performance_importance.getValue()+newValue);
 						break;
 					case 3:
 						slider_vehicle_energy_consumption_importance.setValue(slider_vehicle_energy_consumption_importance.getValue()+newValue);
 						break;
 					case 4:
-						slider_vehicle_resource_demand_importance.setValue(slider_vehicle_resource_demand_importance.getValue()+newValue);
+						slider_vehicle_hardware_demand_importance.setValue(slider_vehicle_hardware_demand_importance.getValue()+newValue);
 						break;
 					case 5:
 						slider_security_importance.setValue(slider_security_importance.getValue()+newValue);
@@ -811,7 +811,7 @@ public class gui implements FocusListener {
 						slider_operation_expenses_importance.setValue(slider_operation_expenses_importance.getValue()+newValue);
 						break;
 					case 7:
-						slider_capital_expenses_importance.setValue(slider_capital_expenses_importance.getValue()+newValue);
+						slider_capital_expenditures_importance.setValue(slider_capital_expenditures_importance.getValue()+newValue);
 						break;
 					}
 				}
@@ -846,12 +846,12 @@ public class gui implements FocusListener {
 		
 		importance_factor[0] = ((double) slider_availability_importance.getValue())/1000;
 		importance_factor[1] = ((double) slider_latency_importance.getValue())/1000;
-		importance_factor[2] = ((double) slider_resource_restriction_importance.getValue())/1000;
+		importance_factor[2] = ((double) slider_processing_performance_importance.getValue())/1000;
 		importance_factor[3] = ((double) slider_vehicle_energy_consumption_importance.getValue())/1000;
-		importance_factor[4] = ((double) slider_vehicle_resource_demand_importance.getValue())/1000;
+		importance_factor[4] = ((double) slider_vehicle_hardware_demand_importance.getValue())/1000;
 		importance_factor[5] = ((double) slider_security_importance.getValue())/1000;
 		importance_factor[6] = ((double) slider_operation_expenses_importance.getValue())/1000;
-		importance_factor[7] = ((double) slider_capital_expenses_importance.getValue())/1000;
+		importance_factor[7] = ((double) slider_capital_expenditures_importance.getValue())/1000;
 			
 		applicationModelData.setImportance_factor(importance_factor);
 		/*

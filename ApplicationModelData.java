@@ -54,12 +54,12 @@ public class ApplicationModelData {
 		
 		//0. Availability/Robustness
 		//1. Latency
-		//2. Performance of the available platform 
+		//2. Processing Performance
 		//3. Energy consumption  of Vehicle
-		//4. Requirements on vehicle hardware for function execution
+		//5. Necessary On-Board Hardware
 		//5. Security 
 		//6. Operation Expenses 
-		//7. Capital Expenses			
+		//7. Capital Expenditures			
 			
 		//STANDARD VALUES, do not have to be in a specific range! (since min-max normalized later!)
 		vehicle_only_criteria[0] = 10;
@@ -204,12 +204,12 @@ public class ApplicationModelData {
 		
 		//0. Availability/Robustness
 		//1. Latency
-		//2. Performance of the available platform 
+		//2. Processing Performance
 		//3. Energy consumption  of Vehicle
-		//4. Requirements on vehicle hardware for function execution
+		//5. Necessary On-Board Hardware
 		//5. Security 
 		//6. Operation Expenses 
-		//7. Capital Expenses
+		//7. Capital Expenditures
 		
 	
 	}
