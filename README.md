@@ -10,4 +10,4 @@ The Java code was written and tested in Eclipse IDE with the WindowBuilder exten
  
 Select all repositories with "-- All Available Sites--" and install all WindowBuilder extension under "General Purpose Tools" or "WindowBuilder" itself. The GUI then allows to calculate suitabilities according to the input parameters as shown in the screenshot:
 
-![OPTICAM](https://github.com/sommsmartin/OptiCAM-MCDMCloudApplicationModels/assets/127199235/500964b7-588e-4bc5-9589-e126d5ea0611)
+![OPTICAM](https://github.com/sommsmartin/OptiCAM-MCDMCloudApplicationModels/assets/127199235/ee056be1-f932-46d1-9940-8554d7a87ac2)
